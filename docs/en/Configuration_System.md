@@ -24,7 +24,7 @@ As for garbage collection, G1 collector with JDK 1.8 is recommended:
 
 These GC options looks a little aggressive, but it’s proved to have good performance in our production environment
 
-Don’t set a too small value for -XX:MaxGCPauseMillis, otherwise JVM will use a small young generation to achieve this goal which will cause very frequent minor GC.So use rolling GC log file is recommended:
+Don’t set a too small value for -XX:MaxGCPauseMillis, otherwise JVM will use a small young generation to achieve this goal which will cause very frequent minor GC.So rolling GC log file is recommended:
     
     -XX:+UseGCLogFileRotation 
     -XX:NumberOfGCLogFiles=5 
